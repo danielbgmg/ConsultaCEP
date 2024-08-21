@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+:root {
+    --background: #1a1a1a;
+    --bg-container: #423738;
+    --bg-button: #d3af85;
+    --text-details: #f4b315;
+    --text-bold: #e59312;
+    --text-info: #d3af85
+
+}
+
+body {
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--bg-container);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(-360deg);
+    }
+}
+
+.spin.openSpin {
+    display: block;
+}
+
+.spin {
+    display: none;
+    height: 30px;
+    width: 30px;
+    border: 3px solid white;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    align-self: center;
+}
+
+h1 {
+    color: var(--text-details);
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cepForm {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#cepForm input {
+    width: 215px;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+#cepForm button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: var(--background);
+    color: var(--text-details);
+    cursor: pointer;
+}
+
+#infoResult {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#returnInfo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-bold);
+}
+
+.infoStreet {
+    display: flex;
+    flex-direction: column;
+}
+
+.spanName {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-bold);
+}
+
+.span {
+    color: var(--text-info);
+}
